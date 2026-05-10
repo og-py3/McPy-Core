@@ -4,7 +4,7 @@ A modern Python library for connecting to and interacting with Minecraft Java Ed
 
 **Supported versions:** Minecraft **1.20.2 → 1.21.11** (protocol 764–775) + snapshot builds
 
-Inspired by [PyCraft](https://github.com/ammaraskar/pyCraft) but rebuilt from scratch for modern Python and modern Minecraft.
+**By Og.py3 aka Haripriyan 
 
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://python.org)
