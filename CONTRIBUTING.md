@@ -1,6 +1,9 @@
 # Contributing to Mcpycore
 
 Thank you for your interest in contributing!
+Ltc - ltc1q4gawvh9fdkqraktrnyehfkzu0kt5k896gtql20
+
+Btc - bc1qxcrfuq7ljvds2ft7anf2gapurt7ykj2eer8c0p
 
 ## Getting Started
 
