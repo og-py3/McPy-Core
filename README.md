@@ -3,6 +3,7 @@
 **Professional async-first Minecraft Java Edition protocol library.**
 
 **By Haripriyan**
+
 [![Python 3.12+](https://img.shields.io/badge/python-3.12%2B-blue.svg)](https://www.python.org/)
 [![Protocol](https://img.shields.io/badge/MC%20protocol-764–775-green.svg)](https://wiki.vg/Protocol)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
