@@ -7,7 +7,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 McPy-Core is a clean, scalable, production-quality Minecraft protocol framework for Python 3.12+. Build bots, automation tools, custom clients, protocol research tools, and servers with a modern async API.
-
+**By Haripriyan**
 ```python
 import asyncio
 from mcpycore import MinecraftClient
