@@ -1,0 +1,1 @@
+"""McPy-Core sub-package."""
