@@ -1,59 +1,77 @@
 [build-system]
 requires = ["setuptools>=68.0", "wheel"]
-build-backend = "setuptools.backends.legacy:build"
+build-backend = "setuptools.build_meta"
 
 [project]
-name = "mcpycore"
-version = "0.4.0"
-description = "A modern Python library for interacting with Minecraft Java Edition servers (1.20.2–1.21.11)"
+name = "mcpy-core"
+version = "1.0.0"
+description = "Professional async-first Minecraft Java Edition protocol framework (1.20.2 – 1.21.11)"
 readme = "README.md"
 license = { text = "MIT" }
-requires-python = ">=3.10"
+requires-python = ">=3.11"
 authors = [
-    { name = "Mcpycore Contributors" }
+    { name = "McPy-Core Contributors" }
 ]
-keywords = ["minecraft", "protocol", "client", "bot", "mc", "java-edition"]
+keywords = [
+    "minecraft", "protocol", "client", "bot", "async",
+    "asyncio", "java-edition", "mc", "framework",
+]
 classifiers = [
-    "Development Status :: 3 - Alpha",
+    "Development Status :: 4 - Beta",
     "Intended Audience :: Developers",
     "License :: OSI Approved :: MIT License",
+    "Framework :: AsyncIO",
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.10",
-    "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
     "Programming Language :: Python :: 3.13",
     "Topic :: Games/Entertainment",
     "Topic :: Software Development :: Libraries :: Python Modules",
+    "Typing :: Typed",
 ]
 dependencies = [
     "cryptography>=41.0.0",
-    "requests>=2.31.0",
 ]
 
 [project.optional-dependencies]
 dev = [
-    "pytest>=7.0",
-    "pytest-asyncio>=0.21",
-    "black",
-    "mypy",
+    "pytest>=8.0",
+    "pytest-asyncio>=0.23",
+    "black>=24.0",
+    "mypy>=1.8",
+    "ruff>=0.3",
 ]
 
 [project.urls]
-Homepage = "https://github.com/youruser/mcpycore"
-Issues = "https://github.com/youruser/mcpycore/issues"
-Changelog = "https://github.com/youruser/mcpycore/releases"
+Homepage      = "https://github.com/your-org/mcpy-core"
+Documentation = "https://github.com/your-org/mcpy-core/blob/main/docs/quickstart.md"
+Issues        = "https://github.com/your-org/mcpy-core/issues"
+Changelog     = "https://github.com/your-org/mcpy-core/blob/main/CHANGELOG.md"
 
 [tool.setuptools.packages.find]
-where = ["."]
+where   = ["."]
 include = ["mcpycore*"]
 
 [tool.pytest.ini_options]
-testpaths = ["tests"]
+testpaths       = ["tests"]
+asyncio_mode    = "auto"
+log_cli         = true
+log_cli_level   = "WARNING"
 
 [tool.black]
+line-length    = 100
+target-version = ["py312"]
+
+[tool.ruff]
 line-length = 100
-target-version = ["py310"]
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+ignore = ["E501"]
 
 [tool.mypy]
-python_version = "3.10"
-strict = true
+python_version         = "3.12"
+strict                 = true
+warn_return_any        = true
+warn_unused_ignores    = true
+disallow_untyped_defs  = true
