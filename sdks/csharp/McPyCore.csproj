@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <LangVersion>12</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+
+    <!-- NuGet package metadata -->
+    <PackageId>McPyCore</PackageId>
+    <Version>2.0.0</Version>
+    <Authors>McPy-Core Contributors</Authors>
+    <Description>Official C# SDK for McPy-Core — drive Minecraft Java Edition bots via the bridge server</Description>
+    <PackageTags>minecraft;bot;protocol;async;websocket;csharp</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/og-py3/McPy-Core</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/og-py3/McPy-Core</RepositoryUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Text.Json" Version="8.0.0" />
+    <PackageReference Include="Websocket.Client" Version="5.1.1" />
+  </ItemGroup>
+</Project>

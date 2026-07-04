@@ -1,0 +1,30 @@
+[package]
+name        = "mcpy-core"
+version     = "2.0.0"
+edition     = "2021"
+description = "Official Rust SDK for McPy-Core — drive Minecraft bots via the bridge server"
+license     = "MIT"
+homepage    = "https://github.com/og-py3/McPy-Core"
+repository  = "https://github.com/og-py3/McPy-Core"
+keywords    = ["minecraft", "bot", "protocol", "async", "websocket"]
+categories  = ["game-development", "network-programming", "asynchronous"]
+readme      = "README.md"
+rust-version = "1.70"
+
+[dependencies]
+tokio         = { version = "1",    features = ["full"] }
+tokio-tungstenite = { version = "0.21", features = ["native-tls"] }
+futures-util  = "0.3"
+serde         = { version = "1", features = ["derive"] }
+serde_json    = "1"
+url           = "2"
+log           = "0.4"
+tracing       = "0.1"
+
+[dev-dependencies]
+tokio-test = "0.4"
+env_logger = "0.11"
+
+[[example]]
+name = "basic_bot"
+path = "examples/basic_bot.rs"

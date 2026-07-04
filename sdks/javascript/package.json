@@ -1,0 +1,31 @@
+{
+  "name": "mcpy-core-js",
+  "version": "2.0.0",
+  "description": "Official JavaScript/TypeScript client for McPy-Core — drive Minecraft bots from Node.js via the bridge server",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "commonjs",
+  "scripts": {
+    "build": "tsc",
+    "test": "node --test dist/tests/",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": ["minecraft", "bot", "protocol", "async", "mcpycore"],
+  "author": "McPy-Core Contributors",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/og-py3/McPy-Core"
+  },
+  "homepage": "https://github.com/og-py3/McPy-Core/tree/main/sdks/javascript",
+  "bugs": { "url": "https://github.com/og-py3/McPy-Core/issues" },
+  "dependencies": {
+    "ws": "^8.14.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/ws": "^8.5.10",
+    "typescript": "^5.3.0"
+  },
+  "engines": { "node": ">=18.0.0" }
+}

@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "mcpy-core"
-version = "1.0.0"
-description = "Professional async-first Minecraft Java Edition protocol framework (1.20.2 – 1.21.11)"
+version = "2.0.0"
+description = "Professional async-first Minecraft Java Edition protocol library — 1.7.2 through 1.21.11, multi-language bridge, humanized anti-bot joining"
 readme = "README.md"
 license = { text = "MIT" }
 requires-python = ">=3.11"
@@ -13,23 +13,27 @@ authors = [
     { name = "McPy-Core Contributors" }
 ]
 keywords = [
-    "minecraft", "protocol", "client", "bot", "async",
-    "asyncio", "java-edition", "mc", "framework",
+    "minecraft", "protocol", "client", "bot", "async", "asyncio",
+    "java-edition", "mc", "framework", "anti-bot", "humanize",
+    "1.7", "1.8", "1.12", "1.16", "1.17", "1.19", "1.20", "1.21",
 ]
 classifiers = [
-    "Development Status :: 4 - Beta",
+    "Development Status :: 5 - Production/Stable",
     "Intended Audience :: Developers",
     "License :: OSI Approved :: MIT License",
     "Framework :: AsyncIO",
     "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
     "Programming Language :: Python :: 3.13",
     "Topic :: Games/Entertainment",
     "Topic :: Software Development :: Libraries :: Python Modules",
     "Typing :: Typed",
+    "Operating System :: OS Independent",
 ]
 dependencies = [
     "cryptography>=41.0.0",
+    "websockets>=11.0",
 ]
 
 [project.optional-dependencies]
@@ -39,13 +43,18 @@ dev = [
     "black>=24.0",
     "mypy>=1.8",
     "ruff>=0.3",
+    "build>=1.0",
+    "twine>=5.0",
 ]
 
+[project.scripts]
+mcpycore-bridge = "mcpycore.bridge.__main__:main"
+
 [project.urls]
-Homepage      = "https://github.com/your-org/mcpy-core"
-Documentation = "https://github.com/your-org/mcpy-core/blob/main/docs/quickstart.md"
-Issues        = "https://github.com/your-org/mcpy-core/issues"
-Changelog     = "https://github.com/your-org/mcpy-core/blob/main/CHANGELOG.md"
+Homepage      = "https://github.com/og-py3/McPy-Core"
+Documentation = "https://github.com/og-py3/McPy-Core/blob/main/docs/quickstart.md"
+Issues        = "https://github.com/og-py3/McPy-Core/issues"
+Changelog     = "https://github.com/og-py3/McPy-Core/blob/main/CHANGELOG.md"
 
 [tool.setuptools.packages.find]
 where   = ["."]
